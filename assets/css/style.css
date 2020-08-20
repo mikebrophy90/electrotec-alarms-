@@ -25,31 +25,36 @@ h6{
     font-weight: 300;
 }
 
-/*-------------------------------------------------colors*/
+/*-------------------------------------------------colors
+
+058ED9 lt blue
+F4EBD9 eggshell
+03036C blue
+A39A92 lt grey
+77685D dk grey
+*/
 body{
-    background: #cdcdcd;
+    background: #F4EBD9;
 }
 
 .main-header{
-    background: linear-gradient( 60deg, #242146, #0a0722) ;
-    color: #cdcdcd; 
+    
+    color: #03036c; 
 }
 .free-shipping{
-    background: #33cbfa;
-    color: #272727;
+    background: #058ED9;
+    color: #f4ebd9;
 }
 nav{
-    background: #272727;
-    color: #cdcdcd;
-    border-top: 2px solid #cdcdcd;
-    border-bottom: 2px solid #cdcdcd;
+    background: rgb(93, 104, 119);
+    color: #F4EBD9;
 }
 .nav-links{
-    background: #333333;
+    background: #A39A92;
 }
 
 li a{
-    color: #cdcdcd;
+    color: rgb(93, 104, 119);
 }
 
 /*-------------------------------------------------header*/
@@ -105,7 +110,7 @@ li a {
     list-style: none;
     font-family: "Oswald", sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 5px;
     animation: fadein 2s;
     text-decoration: none;
