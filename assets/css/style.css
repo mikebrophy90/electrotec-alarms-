@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&display=swap');
+
+
+
+
+
+/*-------------------------------------------re-usable*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+}
+
+/*-------------------------------------------------colors*/
+body{
+    background: #cdcdcd;
+}
+
+.main-header{
+    background: linear-gradient( 60deg, #242146, #0a0722) ;
+    color: #cdcdcd; 
+}
+.free-shipping{
+    background: #33cbfa;
+    color: #272727;
+}
+nav{
+    background: #272727;
+    color: #cdcdcd;
+    border-top: 2px solid #cdcdcd;
+    border-bottom: 2px solid #cdcdcd;
+}
+.nav-links{
+    background: #333333;
+}
+
+li a{
+    color: #cdcdcd;
+}
+
+/*-------------------------------------------------header*/
+
+.main-header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    position: relative;
+    width: 75%;
+    max-width: 300px;
+}
+.logo img{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translatey(-50%) ;
+    
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.main-header i{
+    font-size: 25px;
+    position: absolute;
+    right: 25px;
+    line-height: 100px;
+}
+.nav-links {
+    display: block;
+    position: fixed;
+    top: 174px;
+    width: 100%;
+    height: 100vh;
+    right: -100%;
+    padding: 0;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+.nav-links li {
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+li a {
+    list-style: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    animation: fadein 2s;
+    text-decoration: none;
+
+}
+
+.free-shipping{
+    height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.free-shipping h6{
+    line-height: 20px;
+}
+/*------------------------------------------------toggle*/
+
+label #btn {
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 5px;
+}
+label #cancel {
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+    letter-spacing: 5px;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .nav-links {
+    right: 0;
+}
+#check:checked ~ label #btn {
+    display: none;
+}
+#check:checked ~ label #cancel {
+    display: block;
+}
+/*-------------------------------------------------home-body*/
+
+
+/*-------------------------------------------------footer*/
