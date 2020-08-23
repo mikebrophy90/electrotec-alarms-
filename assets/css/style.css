@@ -125,7 +125,6 @@ footer{
   color: #fff;
   background: #058ED9;
   font-size: 17px;
-  border: none;
   cursor: pointer;
   border-radius: 8px;
   border:1px #025B8B solid;
@@ -151,14 +150,16 @@ label h5{
     border-bottom: 2px solid #fff;
 }
 .nav-links{
-    width: 100%;
     display: block;
-    position: absolute;
-    right: -100vw;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
+    position: fixed;
+    top: 221px;
+    width: 100%;
+    right: -100%;
+    padding: 0;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     z-index: 1;
 }
 .nav-links:after{
