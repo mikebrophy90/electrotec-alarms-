@@ -25,40 +25,63 @@ h6{
     font-weight: 300;
 }
 
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+}
+
 /*-------------------------------------------------colors
 
-058ED9 lt blue
-F4EBD9 eggshell
-03036C blue
-A39A92 lt grey
-77685D dk grey
+#058ED9 blue
+#3B3E42 lt grey
+#2e3136 dk grey
 */
 body{
-    background: #F4EBD9;
+    background: rgba(0, 0, 0, 0.1);
+}
+header{
+    margin-bottom: 150px;
 }
 
 .main-header{
-    
-    color: #03036c; 
+    background:  #fff; 
+}
+.main-header i{
+    color: #2e3136;
+    text-decoration: none;
+}
+.main-header i:hover{
+    color: #058ED9; 
 }
 .free-shipping{
     background: #058ED9;
-    color: #f4ebd9;
+    color: #fff;
+    border-bottom: 1px solid #2e3136;
 }
 nav{
-    background: rgb(93, 104, 119);
-    color: #F4EBD9;
+    background: #2e3136;
+    color: #fff;
 }
-.nav-links{
-    background: #A39A92;
+.nav-links, nav ul ul li{
+    background: #3B3E42;
 }
-
-li a{
-    color: rgb(93, 104, 119);
+nav ul li a{
+    color: #fff;
 }
-
+footer{
+    background: #2e3136;
+    color: #fff;
+}
 /*-------------------------------------------------header*/
-
+.free-shipping{
+    height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.free-shipping h6{
+    line-height: 20px;
+}
 .main-header{
     width: 100%;
     height: 100px;
@@ -72,7 +95,6 @@ li a{
 }
 .logo img{
     position: absolute;
-    left: 20px;
     top: 50%;
     transform: translatey(-50%) ;
     
@@ -80,52 +102,99 @@ li a{
     height: auto;
     float: left;
 }
-.main-header i{
+.search-bar-2{
+    display: none;
+}
+.search-bar-1{
+    width: 100%;
+}
+.search-bar-1 input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 15px;
+  font-size: 17px;
+  width: 70%;
+  border-radius: 8px;
+  height: 25px;
+}
+.search-bar-1 button {
+  width: 20%;
+  height: 32px;
+  padding: 6px;
+  margin: 8px 0 8px 5px;
+  color: #fff;
+  background: #058ED9;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  border:1px #025B8B solid;
+}
+
+.shopping-cart i{
     font-size: 25px;
     position: absolute;
     right: 25px;
-    line-height: 100px;
-}
-.nav-links {
+    top: 95px;
+    text-decoration: none;
     display: block;
-    position: fixed;
-    top: 174px;
+}
+.shopping-cart .cart-price{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 130px;
+    font-family: "Roboto", sans-serif;
+}
+label h5{
+
+    border-bottom: 2px solid #fff;
+}
+.nav-links{
     width: 100%;
-    height: 100vh;
-    right: -100%;
-    padding: 0;
-    transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-}
-.nav-links li {
     display: block;
-    line-height: 50px;
+    position: absolute;
+    right: -100vw;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 1;
+}
+.nav-links:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav ul{
+    list-style: none;
+    position: relative;
+
+}
+nav ul li{
     text-align: center;
-    margin-top: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+nav ul li a{
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    font-family: "oswald", sans-serif;
+    letter-spacing: 6px;
+    padding: 0 2px;
+}
+.sub-menu{
+    border-top: 1px #fff solid;
+    display: none;
+    width: 100%;
     
 }
-li a {
-    list-style: none;
-    font-family: "Oswald", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    animation: fadein 2s;
-    text-decoration: none;
 
+nav ul li:hover .sub-menu{
+    display: block;
+    position: absolute;;
 }
-
-.free-shipping{
-    height: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-}
-.free-shipping h6{
-    line-height: 20px;
-}
-/*------------------------------------------------toggle*/
+/*----------------------------------------------toggle*/
 
 label #btn {
     text-align: center;
@@ -155,7 +224,199 @@ label #cancel {
 #check:checked ~ label #cancel {
     display: block;
 }
+
+
 /*-------------------------------------------------home-body*/
 
+.catalogue-images {
+    background: #fafafa;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+    padding: 1rem;
+    padding-bottom: 100px;
+    animation: fadein 2s;
+}
+.box {
+    display: block;
+}
+.box img {
+    width: 100%;
+    overflow: hidden;
+    transition:all 0.5s;
+}
+.box img:hover{
+    filter: brightness(75%);
+    cursor: pointer;
+    border: 1px solid #058ED9;
+}
+
+.catalogue-images a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2e3136;
+}
 
 /*-------------------------------------------------footer*/
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.slogan{
+    width: 100%
+    height:75px;
+    padding: 10px
+}
+.slogan h2{
+    display: none;
+    letter-spacing: 3px;
+}
+.slogan h4{
+    letter-spacing: 3px;
+}
+.electrotec-footer{
+    height: 37.5px;
+}
+.electrotec-footer p{
+    letter-spacing: 3px;
+    font-size: 15px;
+    line-height: 37.5px;
+}
+.copyright-footer{
+    height: 37.5px;
+}
+.copyright-footer p{
+    font-size: 15px;
+    line-height: 37.5px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------responsive*/
+/*----------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 900px) {
+
+/*---------------------------------------------------responsive 900px header*/
+label {
+    display: none;   
+}
+.search-bar-1{
+    display: none;
+}
+.search-bar-2{
+    width: 350px;
+    display: block;
+    position: absolute;
+    right: 125px;
+    top: 47px;
+}
+.search-bar-2 input[type=text] {
+  padding: 10px;  
+  margin-top: 8px;
+  font-size: 17px;
+  width: 70%;
+  border-radius: 8px;
+  height: 25px;
+}
+.search-bar-2 button {
+  width: 25%;
+  height: 32px;
+  margin: 8px 0 8px 5px;
+  color: #fff;
+  background: #058ED9;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  border:1px #025B8B solid;
+}
+.logo img{
+    left: 25px;
+}
+.shopping-cart i{
+    font-size: 25px;
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    text-decoration: none;
+    display: block;
+}
+.shopping-cart .cart-price{
+    display: block;
+    position: absolute;
+    right: 42px;
+    top: 80px;
+    font: "Roboto", sans-serif;
+}
+.nav-links{
+    right:0;
+    display: inline;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    width: 16.6666666667%;
+    text-align: center;
+    border-bottom: none;
+}
+nav ul li a{
+    line-height: 50px;
+    letter-spacing: 3px;
+}
+.nav-links li:hover{
+    background: #058ED9;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;  
+}
+.active{
+    background:#058ED9;
+}
+.main-header i{
+    right: 50px;
+
+}
+
+.sub-menu{
+    display: none;
+}
+
+/*------------------------------------footer 900 responsive--*/
+
+.slogan h2{
+    display: block;
+    padding: 10px;
+}
+.slogan h4{
+    display: none;
+}
+.electrotec-footer{
+    width: 50%;
+    display: inline-block;
+    height: 75px;
+    float: left;
+}
+.copyright-footer{
+    width: 50%;
+    display: inline-block;
+    height: 75px;
+    float: right;
+}
+
+.electrotec-footer p, .copyright-footer p{
+    line-height: 75px;
+}  
