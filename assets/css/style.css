@@ -218,6 +218,7 @@ label #cancel {
 }
 #check:checked ~ .nav-links {
     right: 0;
+    position: absolute;
 }
 #check:checked ~ label #btn {
     display: none;
