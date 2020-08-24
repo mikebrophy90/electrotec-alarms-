@@ -361,14 +361,15 @@ label {
     right:0;
     display: inline;
     position: absolute;
+    top: 120px;
 }
 nav ul{
     float: right;
     list-style: none;
     position: relative;
+    
 }
 nav ul li{
-    float: left;
     display: inline-block;
     width: 16.6666666667%;
     text-align: center;
