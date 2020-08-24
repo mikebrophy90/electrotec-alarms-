@@ -24,7 +24,6 @@ h6{
     font-family: "Oswald", sans-serif;
     font-weight: 300;
 }
-
 p{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
@@ -43,7 +42,6 @@ body{
 header{
     margin-bottom: 150px;
 }
-
 .main-header{
     background:  #fff; 
 }
@@ -96,8 +94,7 @@ footer{
 .logo img{
     position: absolute;
     top: 50%;
-    transform: translatey(-50%) ;
-    
+    transform: translatey(-50%);    
     width: 100%;
     height: auto;
     float: left;
@@ -124,12 +121,11 @@ footer{
   margin: 8px 0 8px 5px;
   color: #fff;
   background: #058ED9;
-  font-size: 17px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 8px;
   border:1px #025B8B solid;
 }
-
 .shopping-cart i{
     font-size: 25px;
     position: absolute;
@@ -146,10 +142,9 @@ footer{
     font-family: "Roboto", sans-serif;
 }
 label h5{
-
     border-bottom: 2px solid #fff;
 }
-.nav-links{
+.nav-links {
     display: block;
     position: fixed;
     top: 221px;
@@ -162,15 +157,9 @@ label h5{
     -o-transition: all .5s;
     z-index: 1;
 }
-.nav-links:after{
-    content: '';
-    clear: both;
-    display: table;
-}
 nav ul{
     list-style: none;
     position: relative;
-
 }
 nav ul li{
     text-align: center;
@@ -188,13 +177,12 @@ nav ul li a{
     border-top: 1px #fff solid;
     display: none;
     width: 100%;
-    
 }
-
 nav ul li:hover .sub-menu{
     display: block;
-    position: absolute;;
+    position: absolute;
 }
+
 /*----------------------------------------------toggle*/
 
 label #btn {
@@ -227,7 +215,6 @@ label #cancel {
     display: block;
 }
 
-
 /*-------------------------------------------------home-body*/
 
 .catalogue-images {
@@ -255,7 +242,6 @@ label #cancel {
     cursor: pointer;
     border: 1px solid #058ED9;
 }
-
 .catalogue-images a{
     text-decoration: none;
     text-transform: uppercase;
@@ -271,9 +257,8 @@ footer{
     height: 150px;
     text-align: center;
 }
-
 .slogan{
-    width: 100%
+    width: 100%;
     height:75px;
     padding: 10px
 }
@@ -307,6 +292,7 @@ footer{
 @media only screen and (min-width: 900px) {
 
 /*---------------------------------------------------responsive 900px header*/
+
 label {
     display: none;   
 }
@@ -362,12 +348,13 @@ label {
     display: inline;
     position: absolute;
     top: 120px;
+}.nav-links a{
+    width: 100%;
 }
 nav ul{
     float: right;
     list-style: none;
     position: relative;
-    
 }
 nav ul li{
     display: inline-block;
@@ -393,9 +380,12 @@ nav ul li a{
     right: 50px;
 
 }
-
 .sub-menu{
-    display: none;
+    width: 16.6666666667%;
+}
+.sub-menu li{
+    width: 100%;
+    border-top: 1px solid #fff;
 }
 
 /*------------------------------------footer 900 responsive--*/
@@ -411,13 +401,13 @@ nav ul li a{
     width: 50%;
     display: inline-block;
     height: 75px;
-    float: left;
+    
 }
 .copyright-footer{
     width: 50%;
     display: inline-block;
     height: 75px;
-    float: right;
+    
 }
 
 .electrotec-footer p, .copyright-footer p{
