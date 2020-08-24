@@ -335,7 +335,6 @@ label {
   color: #fff;
   background: #058ED9;
   font-size: 17px;
-  border: none;
   cursor: pointer;
   border-radius: 8px;
   border:1px #025B8B solid;
@@ -361,6 +360,7 @@ label {
 .nav-links{
     right:0;
     display: inline;
+    position: absolute;
 }
 nav ul{
     float: right;
