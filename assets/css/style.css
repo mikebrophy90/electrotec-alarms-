@@ -4,12 +4,20 @@
 
 
 
-/*-------------------------------------------re-usable*/
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background: #83a0ee; 
+    background: linear-gradient(#83a0ee, white 500px);
+    background-attachment: fixed;
+}
+
+/*-------------------------------------------re-usable*/
+
 .uppercase{
     text-transform: uppercase;
 }
@@ -30,182 +38,209 @@ p{
     line-height: 140%;
 }
 
-/*-------------------------------------------------colors
 
-#058ED9 blue
-#3B3E42 lt grey
-#2e3136 dk grey
-*/
-body{
-    background: rgba(0, 0, 0, 0.1);
+/*-------------------------------------------main-body*/
+
+.main-body{
+    width: 80%;
+    margin: 0 auto;
 }
-header{
-    margin-bottom: 150px;
-}
-.main-header{
-    background:  #fff; 
-}
-.main-header i{
-    color: #2e3136;
-    text-decoration: none;
-}
-.main-header i:hover{
-    color: #058ED9; 
-}
-.free-shipping{
-    background: #058ED9;
-    color: #fff;
-    border-bottom: 1px solid #2e3136;
-}
-nav{
-    background: #2e3136;
-    color: #fff;
-}
-.nav-links, nav ul ul li{
-    background: #3B3E42;
-}
-nav ul li a{
-    color: #fff;
-}
-footer{
-    background: #2e3136;
-    color: #fff;
-}
-/*-------------------------------------------------header*/
-.free-shipping{
-    height: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-}
-.free-shipping h6{
-    line-height: 20px;
-}
-.main-header{
+.custom-border{
     width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
+    border:3px solid #032f7d;
+    border-radius: 10px;
+    background: #fff
 }
-.logo{
+
+/*------------------------------------header*/
+
+header{
+    margin-top: 50px;
+    height: 100px;
     position: relative;
-    width: 75%;
-    max-width: 300px;
 }
 .logo img{
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);    
-    width: 100%;
+    width: 300px;
     height: auto;
     float: left;
+    margin-left: 50px;
+    line-height: 100px;
 }
-.search-bar-2{
-    display: none;
-}
-.search-bar-1{
-    width: 100%;
-}
-.search-bar-1 input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  margin-left: 15px;
-  font-size: 17px;
-  width: 70%;
-  border-radius: 8px;
-  height: 25px;
-}
-.search-bar-1 button {
-  width: 20%;
-  height: 32px;
-  padding: 6px;
-  margin: 8px 0 8px 5px;
-  color: #fff;
-  background: #058ED9;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 8px;
-  border:1px #025B8B solid;
+.shopping-cart{
+    width: 100px;
+    float: right;
+    margin-right: 50px;
+    text-align: center;
+    height: 100px;
 }
 .shopping-cart i{
-    font-size: 25px;
-    position: absolute;
-    right: 25px;
-    top: 95px;
+    font-size: 20px;
     text-decoration: none;
-    display: block;
+    color: #032f7d;
+    line-height: 25px;
+    margin-top: 25px;
 }
-.shopping-cart .cart-price{
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 130px;
-    font-family: "Roboto", sans-serif;
+.shopping-cart i:hover{
+    color:  #058ED9
 }
-label h5{
-    border-bottom: 2px solid #fff;
+.cart-price{
+    color: #032f7d; 
 }
-.nav-links {
-    display: block;
-    position: fixed;
-    top: 221px;
-    width: 100%;
-    right: -100%;
-    padding: 0;
-    transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    z-index: 1;
+
+/*---------------------------------------nav-bar*/
+
+label{
+    display: none;
 }
-nav ul{
-    list-style: none;
-    position: relative;
+input{
+    display: none;
 }
-nav ul li{
+nav{
+    margin-top: 5px;
+    height: 50px;
+}
+.nav-links li{
+    display: inline-block;
+    width: 16%;
+    height: 44px;
     text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
-nav ul li a{
+
+.nav-links li a{
     text-decoration: none;
-    line-height: 70px;
-    font-size: 18px;
-    font-family: "oswald", sans-serif;
-    letter-spacing: 6px;
-    padding: 0 2px;
+    font-family: "Oswald", sans-serif;
+    color: #032f7d;
+    letter-spacing: 2px;
+    line-height: 47px;
+}
+
+.nav-links li a:hover{
+    color:  #058ED9
 }
 .sub-menu{
-    border-top: 1px #fff solid;
+    width: 16%;
     display: none;
+    position: absolute;
+    border-left: 3px solid #032f7d;
+    border-right: 3px solid #032f7d;
+    border-bottom: 3px solid #032f7d;
+    border-radius:0 0 10px 10px;
+    background: #fff;
+    z-index: 10;
+    margin-top: -3px;
+    left: 21%;
+}
+.sub-menu ul{
+    padding-bottom: 20px;
+}
+.sub-menu li{
+    display: block;
+    list-style: none;
+    padding: 10px 0 10px 0;
     width: 100%;
+    text-align: center;
+    
+}
+.sub-menu li a{
+    text-decoration: none;
+    color: #032f7d;
+    font-family: "Oswald", sans-serif;
+    width: 100%
+
+}
+.sub-menu li a:hover{
+    color:  #058ED9
 }
 nav ul li:hover .sub-menu{
     display: block;
+}
+/*-------------------------------------------catalogue-images--*/
+
+.catalogue-images{
+    margin-top: 50px;
+}
+
+/*-------------------------------------------footer*/
+
+footer{
+    position: relative;
+    margin-top: 25px;
+}
+.footer-content{
+    padding: 10px;
+    color: #032f7d;
+}
+.p1, .p2{
+    font-size: 15px;
+}
+.p3{
     position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 15px;
 }
 
-/*----------------------------------------------toggle*/
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 1240px-------------------*/
+/*---------------------------------------------------------------*/
 
-label #btn {
-    text-align: center;
-    font-size: 25px;
-    line-height: 50px;
-    cursor: pointer;
+@media screen and (max-width: 1240px){
+
+footer{
+    max-height: 300px;
+}
+
+.p1, .p2, .p3{
     display: block;
-    letter-spacing: 5px;
-}
-label #cancel {
     text-align: center;
-    font-size: 25px;
-    line-height: 50px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+}
+.p3{
+    font-size: 16px;
+    position: relative;
+    padding: 10px 0 0 10px;
+    
+}
+
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 900px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 900px){
+
+label{
+    display: block;
     cursor: pointer;
+}
+label #btn{
+    display: block;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #032f7d;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+label #cancel{
     display: none;
-    letter-spacing: 5px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #032f7d;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 #check {
     display: none;
 }
 #check:checked ~ .nav-links {
-    right: 0;
+    right: 10%;
     position: absolute;
 }
 #check:checked ~ label #btn {
@@ -214,202 +249,56 @@ label #cancel {
 #check:checked ~ label #cancel {
     display: block;
 }
-
-/*-------------------------------------------------home-body*/
-
-.catalogue-images {
-    background: #fafafa;
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 2rem;
-    grid-auto-flow: dense;
-    padding: 1rem;
-    padding-bottom: 100px;
-    animation: fadein 2s;
-}
-.box {
-    display: block;
-}
-.box img {
-    width: 100%;
-    overflow: hidden;
-    transition:all 0.5s;
-}
-.box img:hover{
-    filter: brightness(75%);
-    cursor: pointer;
-    border: 1px solid #058ED9;
-}
-.catalogue-images a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #2e3136;
-}
-
-/*-------------------------------------------------footer*/
-
-footer{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
+.nav-links{
+    position: fixed;
+    width: 80%;
+    top: 210px;
+    right: -100%;
+    border:3px solid #032f7d;
+    border-radius: 10px;
+    background: #fff;
     text-align: center;
+    z-index: 10;
+    box-shadow: 2px 2px 5px #000;
+    transition: all .5s ease-in-out;
 }
-.slogan{
-    width: 100%;
-    height:75px;
-    padding: 10px
-}
-.slogan h2{
-    display: none;
-    letter-spacing: 3px;
-}
-.slogan h4{
-    letter-spacing: 3px;
-}
-.electrotec-footer{
-    height: 37.5px;
-}
-.electrotec-footer p{
-    letter-spacing: 3px;
-    font-size: 15px;
-    line-height: 37.5px;
-}
-.copyright-footer{
-    height: 37.5px;
-}
-.copyright-footer p{
-    font-size: 15px;
-    line-height: 37.5px;
-}
-
-/*------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------responsive*/
-/*----------------------------------------------------------------------------------*/
-
-@media only screen and (min-width: 900px) {
-
-/*---------------------------------------------------responsive 900px header*/
-
-label {
-    display: none;   
-}
-.search-bar-1{
-    display: none;
-}
-.search-bar-2{
-    width: 350px;
+.nav-links li{
     display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+}
+.nav-links li a{
+    line-height: 70px;
+}
+nav ul li:hover .sub-menu{
+    display: none;
+}
+
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 650px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 650px){
+
+.logo{
+    width: 60%;
     position: absolute;
-    right: 125px;
-    top: 47px;
-}
-.search-bar-2 input[type=text] {
-  padding: 10px;  
-  margin-top: 8px;
-  font-size: 17px;
-  width: 70%;
-  border-radius: 8px;
-  height: 25px;
-}
-.search-bar-2 button {
-  width: 25%;
-  height: 32px;
-  margin: 8px 0 8px 5px;
-  color: #fff;
-  background: #058ED9;
-  font-size: 17px;
-  cursor: pointer;
-  border-radius: 8px;
-  border:1px #025B8B solid;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
 }
 .logo img{
-    left: 25px;
-}
-.shopping-cart i{
-    font-size: 25px;
-    position: absolute;
-    right: 25px;
-    top: 50px;
-    text-decoration: none;
-    display: block;
-}
-.shopping-cart .cart-price{
-    display: block;
-    position: absolute;
-    right: 42px;
-    top: 80px;
-    font: "Roboto", sans-serif;
-}
-.nav-links{
-    right:0;
-    display: inline;
-    position: absolute;
-    top: 120px;
-}.nav-links a{
+    margin: auto;
     width: 100%;
-}
-nav ul{
-    float: right;
-    list-style: none;
-    position: relative;
-}
-nav ul li{
-    display: inline-block;
-    width: 16.6666666667%;
-    text-align: center;
-    border-bottom: none;
-}
-nav ul li a{
-    line-height: 50px;
-    letter-spacing: 3px;
-}
-.nav-links li:hover{
-    background: #058ED9;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;  
-}
-.active{
-    background:#058ED9;
-}
-.main-header i{
-    right: 50px;
+
 
 }
-.sub-menu{
-    width: 16.6666666667%;
+.shopping-cart{
+    width: 20%;
+    margin-right: 25px;
 }
-.sub-menu li{
-    width: 100%;
-    border-top: 1px solid #fff;
 }
-
-/*------------------------------------footer 900 responsive--*/
-
-.slogan h2{
-    display: block;
-    padding: 10px;
-}
-.slogan h4{
-    display: none;
-}
-.electrotec-footer{
-    width: 50%;
-    display: inline-block;
-    height: 75px;
-    
-}
-.copyright-footer{
-    width: 50%;
-    display: inline-block;
-    height: 75px;
-    
-}
-
-.electrotec-footer p, .copyright-footer p{
-    line-height: 75px;
-}  
