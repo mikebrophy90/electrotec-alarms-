@@ -10,9 +10,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background: #83a0ee; 
-    background: linear-gradient(#83a0ee, white 500px);
+body{ 
+    background: linear-gradient(#058ED9, white 500px);
     background-attachment: fixed;
 }
 
@@ -87,7 +86,7 @@ header{
     margin-top: 25px;
 }
 .shopping-cart i:hover{
-    color:  #058ED9;
+    color:  #FF6a00;
 }
 .cart-price{
     color: #032f7d;
@@ -156,7 +155,7 @@ nav{
 .sub-menu li{
     display: block;
     list-style: none;
-    height: 70px;
+    height: 50px;
     width: 100%;
     text-align: center;
 }
@@ -165,7 +164,7 @@ nav{
     color: #032f7d;
     font-family: "Oswald", sans-serif;
     width: 100%;
-    line-height: 70px;
+    line-height: 50px;
 }
 .sub-menu li a:hover{
     color: #FF6a00;
