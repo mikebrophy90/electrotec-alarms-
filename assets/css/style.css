@@ -173,7 +173,7 @@ nav{
 .sub-menu li{
     display: block;
     list-style: none;
-    height: 25px;
+    height: 30px;
     width: 100%;
     text-align: center;
 }
@@ -182,7 +182,7 @@ nav{
     color: #032f7d;
     font-family: "Oswald", sans-serif;
     width: 100%;
-    line-height: 25px;
+    line-height: 30px;
 }
 .sub-menu li a:hover{
     color: #FF6a00;
