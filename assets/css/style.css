@@ -173,7 +173,7 @@ nav{
 .sub-menu li{
     display: block;
     list-style: none;
-    height: 50px;
+    height: 25px;
     width: 100%;
     text-align: center;
 }
@@ -182,7 +182,7 @@ nav{
     color: #032f7d;
     font-family: "Oswald", sans-serif;
     width: 100%;
-    line-height: 50px;
+    line-height: 25px;
 }
 .sub-menu li a:hover{
     color: #FF6a00;
@@ -247,7 +247,7 @@ footer{
     padding: 10px 0 0 10px;
 }
 .sub-menu li a{
-        font-size: 10px;
+        font-size: 12px;
     }
 }    
 /*---------------------------------------------------------------*/
