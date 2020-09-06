@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 body{ 
-    background: linear-gradient(#058ED9, white 500px);
+    background: linear-gradient(#A6C7FC, white 500px);
     background-attachment: fixed;
 }
 
@@ -79,14 +79,15 @@ header{
     height: 100px;
 }
 .shopping-cart i{
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: #032f7d;
     line-height: 25px;
     margin-top: 25px;
 }
 .shopping-cart i:hover{
-    color:  #FF6a00;
+    color:  #A6C7FC;
+    
 }
 .cart-price{
     color: #032f7d;
@@ -118,6 +119,7 @@ nav{
     justify-content: space-between;
 
 
+
 }
 .nav-links li a{
     display: inline-block;
@@ -129,15 +131,20 @@ nav{
     width: 100%;
     height: 100%;
     text-align: center;
+    transition: all .2s ease-in-out;
 
 }
 .nav-links li a:hover {
     color: #FF6a00;
-    background: #032f7d;
+    background: #0042aa;
+    border-right: 3px solid #032f7d;
+    border-left: 3px solid #032f7d;
 }
 .nav-links li a.active{
     color: #FF6a00;
-    background: #032f7d;
+    background: #0042aa;
+     
+    
 }
 .sub-menu{
     width: 100%;
@@ -151,6 +158,7 @@ nav{
     border-radius:0 0 10px 10px;
     background: #fff;
     z-index: 10;
+
 }
 .sub-menu li{
     display: block;
@@ -168,10 +176,18 @@ nav{
 }
 .sub-menu li a:hover{
     color: #FF6a00;
-    background: #032f7d;
+    background: #0042aa;
+    border-left: none;
+    border-right: none;
 }
 nav ul li:hover .sub-menu{
     display: block;
+}
+.nav-links li a.left-nav:hover{
+    border-left: none;
+}
+.nav-links li a.right-nav:hover{
+    border-right: none;
 }
 /*-------------------------------------------catalogue-images--*/
 
@@ -293,7 +309,10 @@ label #cancel{
 nav ul li:hover .sub-menu{
     display: none;
 }
-
+.nav-links li a:hover{
+    border-left: none;
+    border-right: none;
+}
 }
 
 /*---------------------------------------------------------------*/
