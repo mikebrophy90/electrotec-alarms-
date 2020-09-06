@@ -90,7 +90,8 @@ header{
     -o-transition: all .2s ease-in-out;
 }
 .shopping-cart i:hover{
-    color:  #FF6a00;
+    color:  #ff8b00;
+
 
 }
 .cart-price{
@@ -141,13 +142,13 @@ nav{
     -o-transition: all .2s ease-in-out;
 }
 .nav-links li a:hover {
-    color: #FF6a00;
+    color: #ff8b00;
     background: #0042aa;
     border-right: 3px solid #032f7d;
     border-left: 3px solid #032f7d;
 }
 .nav-links li a.active{
-    color: #FF6a00;
+    color: #ff8b00;
     background: #0042aa;     
     
 }
@@ -161,10 +162,8 @@ nav{
     width: 100%;
     display: none;
     position: absolute;
-    top: 47px; 
-    border-left: 3px solid #032f7d;
-    border-right: 3px solid #032f7d;
-    border-bottom: 3px solid #032f7d;
+    top: 44px; 
+    border: 3px solid #032f7d;
     border-radius:0 0 10px 10px;
     background: #fff;
     z-index: 10;
@@ -185,7 +184,7 @@ nav{
     line-height: 35px;
 }
 .sub-menu li a:hover{
-    color: #FF6a00;
+    color: #ff8b00;
     background: #0042aa;
     border-left: none;
     border-right: none;
