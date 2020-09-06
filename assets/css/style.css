@@ -90,7 +90,7 @@ header{
     -o-transition: all .2s ease-in-out;
 }
 .shopping-cart i:hover{
-    color:  #ff8b00;
+    color:  #024FCB;
 
 
 }
@@ -142,14 +142,14 @@ nav{
     -o-transition: all .2s ease-in-out;
 }
 .nav-links li a:hover {
-    color: #FF9701;
-    background: #0163FF;
+    color: #FFB43F;
+    background: #024FCB;
     border-right: 3px solid #032f7d;
     border-left: 3px solid #032f7d;
 }
 .nav-links li a.active{
-    color: #FF9701;
-    background: #0163FF;     
+    color: #FFB43F;
+    background: #024FCB;     
     
 }
 .left-nav{
@@ -184,8 +184,8 @@ nav{
     line-height: 35px;
 }
 .sub-menu li a:hover{
-    color: #FF9701;
-    background: #0163FF;
+    color: #FFB43F;
+    background: #024FCB;
     border-left: none;
     border-right: none;
 }
