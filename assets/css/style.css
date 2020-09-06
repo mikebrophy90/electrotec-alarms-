@@ -84,10 +84,14 @@ header{
     color: #032f7d;
     line-height: 25px;
     margin-top: 25px;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
 }
 .shopping-cart i:hover{
     color:  #A6C7FC;
-    
+
 }
 .cart-price{
     color: #032f7d;
@@ -115,7 +119,7 @@ nav{
 .nav-links li{
     position: relative;
     width: 16.6666666667%;
-    height: 44px;
+    height: 45px;
     justify-content: space-between;
 
 
@@ -132,7 +136,9 @@ nav{
     height: 100%;
     text-align: center;
     transition: all .2s ease-in-out;
-
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
 }
 .nav-links li a:hover {
     color: #FF6a00;
@@ -142,9 +148,14 @@ nav{
 }
 .nav-links li a.active{
     color: #FF6a00;
-    background: #0042aa;
-     
+    background: #0042aa;     
     
+}
+.left-nav{
+    border-radius: 5px 0 0 5px;
+}
+.right-nav{
+    border-radius: 0 5px 5px 0;
 }
 .sub-menu{
     width: 100%;
