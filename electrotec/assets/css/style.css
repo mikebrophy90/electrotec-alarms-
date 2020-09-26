@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto&display=swap');
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{ 
+    background: linear-gradient(#A6C7FC, white 500px);
+    background-attachment: fixed;
+}
+
+/*-------------------------------------------re-usable*/
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+}
+.red{
+    color: red;
+}
+
+/*-------------------------------------------main-body*/
+
+.main-body{
+    width: 80%;
+    margin: 0 auto;
+}
+.custom-border{
+    width: 100%;
+    border:3px solid #032f7d;
+    border-radius: 10px;
+    background: #fff
+}
+
+/*------------------------------------header*/
+
+header{
+    margin-top: 15px;
+    height: 100px;
+    position: relative;
+}
+.logo{
+    width: 60%;
+    position: absolute;
+    top: 52%;
+    left: 2%;
+    transform: translateY(-50%);
+    }
+.logo img{
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    float: left;
+    line-height: 100px;
+}
+.shopping-cart{
+    width: 20%;
+    float: right;
+    text-align: center;
+    height: 100px;
+}
+.shopping-cart i{
+    font-size: 24px;
+    text-decoration: none;
+    color: #032f7d;
+    line-height: 25px;
+    margin-top: 25px;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.shopping-cart i:hover{
+    color:  #297BFF;
+
+
+}
+.cart-price{
+    color: #032f7d;
+    font-family: "Roboto", sans-serif; 
+}
+
+/*---------------------------------------nav-bar*/
+
+.sub-label{
+    display: none;
+}
+.sub-btn{
+    display: none;
+}
+nav{
+    margin-top: 15px;
+    height: 50px;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+.nav-links li{
+    position: relative;
+    width: 16.6666666667%;
+    height: 44px;
+    justify-content: space-between;
+
+
+
+}
+.nav-links li a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    color: #032f7d;
+    letter-spacing: 2px;
+    line-height: 47px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.nav-links li a:hover {
+    color: #FFDF4D;
+    background: #024FCB;
+    border-right: 3px solid #032f7d;
+    border-left: 3px solid #032f7d;
+}
+.nav-links li a.active{
+    color: #FFDF4D;
+    background: #024FCB;     
+    
+}
+.left-nav{
+    border-radius: 5.5px 0 0 5.5px;
+}
+.right-nav{
+    border-radius: 0 5.5px 5.5px 0;
+}
+.sub-menu{
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 44px; 
+    border: 3px solid #032f7d;
+    border-top: 3px solid #fff;
+    border-radius:0 0 10px 10px;
+    background: #fff;
+    z-index: 10;
+
+}
+.sub-menu li{
+    display: block;
+    list-style: none;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+}
+.sub-menu li a{
+    text-decoration: none;
+    color: #032f7d;
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+    line-height: 35px;
+}
+.sub-menu li a:hover{
+    color: #FFDF4D;
+    background: #024FCB;
+    border-left: none;
+    border-right: none;
+}
+nav ul li:hover .sub-menu{
+    display: block;
+}
+.nav-links li a.left-nav:hover{
+    border-left: none;
+}
+.nav-links li a.right-nav:hover{
+    border-right: none;
+}
+.free-delivery{
+    height: 50px;
+    margin-top: 15px;
+}
+.free-delivery h2{
+    color: #032f7d;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px; 
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #024FCB;
+}
+.main-index{
+    margin-top: 15px;
+}
+/*--------------------------------------------image slider*/
+.slider{
+    text-align: center;
+    overflow: hidden;
+    width: 90%;
+    margin: 5% auto;
+}
+.slider img{
+    width: 100%;
+    height: auto;
+    animation: ani 3s linear;
+}
+
+@keyframes ani{
+    0%{transform: scale(1.2);}
+    10%{transform: scale(1);}
+    100%{transform: scale(1);}
+}
+/*--------------------------------------------best-sellers*/
+.best-sellers{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px; 
+}
+.best-sellers-card{
+    display: inline-block;
+    width: 30%;
+    min-width: 250px;
+    min-height: 500px;
+    border: 2px solid #297BFF;
+    text-align: center;
+    
+}
+.card-image{
+    padding: 10px;
+}
+.card-image img{
+    width: 100%;
+}
+.card-info{
+    position: relative;
+    
+}
+.card-title{
+    color:  #032f7d;
+    padding: 10px;
+    
+}
+.card-description{
+    height: 100px;
+    color:  #032f7d;
+    padding: 10px;
+    text-align: left;
+}
+.item-price{
+    color: #297BFF;
+    text-align: center;
+}
+.card-info button{
+    margin: 10px;
+  background-color: #024FCB;
+  color: #FFDF4D;
+  padding: 12px 20px;
+  border: 1px solid #032f7d;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-info button:hover{
+  background-color: #297BFF;
+  color: #fff;
+}
+
+/*-------------------------------------------customer review*/
+.customer-reviews{
+    margin-bottom: 20px;
+}
+.customer-reviews h2{
+    text-align: center;
+    font-weight: 500;
+    padding: 15px;
+    color: #032f7d;
+    text-decoration: underline;
+}
+.review{
+    padding: 15px;
+    color: #032f7d;
+}
+
+.review h3{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+/*-------------------------------------------footer*/
+
+footer{
+    position: relative;
+    margin: 15px 0;
+}
+.footer-content{
+    padding: 10px 0 10px 25px;
+    color: #032f7d;
+}
+.p1, .p2{
+    font-size: 15px;
+}
+.p3{
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    font-size: 15px;
+}
+
+/*--------------------------------------------catalogue---*/
+.catalogue-images{
+    margin-top: 15px;
+}
+.cat-container {
+    background: #fafafa;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-gap: 1.5rem;
+    grid-auto-flow: dense;
+    padding: 1.5rem;
+     border-radius: 10px;
+}
+.item {
+    display: block;
+    text-align: center;
+}
+.item img {
+    width: 170px;
+    height: 130px;
+    overflow: hidden;
+    transition:all 0.5s;
+}
+.item img:hover{
+    filter: brightness(75%);
+    cursor: pointer;
+    border: 1px solid #297BFF;
+}
+.item .text{
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #032f7d;
+}
+
+/*--------------------------------------------about us---*/
+
+
+
+
+
+.about-us-main{
+    margin-top: 15px;
+}
+.title{
+    color: #032f7d;
+    margin: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+}
+.about-us-text{
+    color: #032f7d;
+    margin: 25px;
+    letter-spacing: 1px;
+}
+
+/*--------------------------------------------t&c's---*/
+
+.tandc-main{
+    margin-top: 15px;
+}
+.tandc-text{
+    color: #032f7d;
+    margin: 25px;
+    letter-spacing: 1px;
+}
+.sub-title{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.tandc-text p{
+    margin-bottom: 25px;
+}
+
+/*--------------------------------------------links---*/
+.links-main{
+    margin-top: 15px;
+}
+.links-main h4{
+    margin: 0 25px 25px 25px;
+    color: #032f7d;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.links-links{
+    margin: 15px 0;
+}
+.links-links p{
+    padding: 25px;
+    color: #032f7d; 
+}
+.links-links a{
+    padding: 25px;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    color: #032f7d;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+}
+.links-links a:hover{
+    color: #297BFF;
+}
+.link-red{
+    background: #FEDBB6;
+    margin-top: 10px; 
+    min-height: 100px;
+}
+.link-blue{
+    background: #B6CEFE; 
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+/*--------------------------------------------contact---*/
+label{
+    font-family: "Roboto", sans-serif;
+    padding-left: 2px;
+}
+.contact-main{
+    margin-top: 15px;
+}
+.contact-main h4{
+    margin: 0 25px 25px 25px;
+    color: #032f7d;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.form-input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#contact-submit {
+  background-color: #024FCB;
+  color: #FFDF4D;
+  padding: 12px 20px;
+  border: 1px solid #032f7d;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-submit:hover {
+  background-color: #297BFF;
+  color: #fff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.contact-main p{
+    display: block;
+    text-align: center;
+    margin: 25px;
+    color: #032f7d;
+}
+.star{
+    color: red;
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 1240px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 1240px){
+
+footer{
+    max-height: 300px;
+}
+.footer-content{
+    padding-right: 25px;
+}
+.p1, .p2, .p3{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+}
+.p3{
+    font-size: 16px;
+    position: relative;
+    padding: 10px 0 0 10px;
+}
+.sub-menu li a{
+        font-size: 12px;
+}
+.best-sellers{
+    flex-direction: column;
+}
+.best-sellers-card{
+    width: 90%;
+    min-height: 200px;
+    margin: 15px auto;
+}
+.card-title{
+    text-align: left;
+}
+.card-image{
+    display: inline-block;
+    float: left;
+    width: 30%;
+}
+.card-info{
+    display: inline-block;
+    float: right;
+    width: 60%;
+}
+}    
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 900px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 900px){
+
+.sub-label{
+    display: block;
+    cursor: pointer;
+}
+.sub-label #btn{
+    display: block;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #032f7d;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.sub-label #cancel{
+    display: none;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #032f7d;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .nav-links {
+    right: 10%;
+    position: absolute;
+}
+#check:checked ~ .sub-label #btn {
+    display: none;
+}
+#check:checked ~ .sub-label #cancel {
+    display: block;
+}
+.nav-links{
+    flex-direction: column;
+    position: fixed;
+    width: 80%;
+    top: 195px;
+    right: -100%;
+    border:3px solid #032f7d;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 2px 2px 5px #000;
+    transition: all .5s ease-in-out;
+}
+.nav-links li{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+}
+.nav-links li a{
+    line-height: 70px;
+}
+nav ul li:hover .sub-menu{
+    display: none;
+}
+.nav-links li a:hover{
+    border-left: none;
+    border-right: none;
+}
+.left-nav, .right-nav{
+    border-radius: 0 0 0 0;
+}
+.free-delivery h2{
+    font-size: 16px;
+}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 650px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 650px){
+
+
+.shopping-cart{
+    margin-right: 25px;
+}
+.title{
+    text-align: center;
+}
+.best-sellers-card{
+    width: 90%;
+    text-align: center;
+}
+.best-sellers-card{
+    width: 90%;
+    min-height: 200px;
+    margin: 15px auto;
+}
+.card-title{
+    text-align: left;
+}
+.card-image{
+    display: block;
+    width: 100%;
+}
+.card-info{
+    display: block;
+    width: 100%;
+}
+
+}
+/*---------------------------------------------------------------*/
+/*---------------------------responsive 450px-------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (max-width: 450px){
+
+    .free-delivery h2{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .prev, .next,.text {font-size: 11px}
+}
+}
